@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Select DOM AI",
+  "version": "0.1.0",
+  "description": "Select localhost DOM elements and copy their outerHTML.",
+  "action": {
+    "default_title": "Select DOM AI"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:*/*", "http://127.0.0.1:*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
